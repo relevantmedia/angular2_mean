@@ -17,9 +17,11 @@
   },
   "homepage": "https://github.com/relevantmedia/angular2_mean",
   "dependencies": {
-    "gulp": "^3.8.11"
   },
   "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-load-plugins": "^0.10.0",
+    "gulp-rename": "^1.2.2",
     "gulp-tsc": "^0.9.4"
   }
 }
