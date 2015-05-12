@@ -1,0 +1,25 @@
+{
+  "name": "spt",
+  "version": "1.0.0",
+  "description": "## Use latest TypeScript compiler TypeScript 1.5 beta includes everything you need. Make sure to upgrade, even if you installed TypeScript previously.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/relevantmedia/angular2_mean.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/relevantmedia/angular2_mean/issues"
+  },
+  "homepage": "https://github.com/relevantmedia/angular2_mean",
+  "dependencies": {
+    "gulp": "^3.8.11"
+  },
+  "devDependencies": {
+    "gulp-tsc": "^0.9.4"
+  }
+}
