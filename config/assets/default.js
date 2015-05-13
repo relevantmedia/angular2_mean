@@ -23,6 +23,7 @@ module.exports = {
 			'modules/*/client/**/*.js'
 		],
 		ts: [
+			'typings/*/*.ts',
 			'modules/*/client/ts/*.ts'
 		],
 		views: ['modules/*/client/views/**/*.html']

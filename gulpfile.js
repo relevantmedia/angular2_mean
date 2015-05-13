@@ -36,19 +36,26 @@ gulp.task('watch', function() {
 
 	// Add watch rules
 	gulp.watch(defaultAssets.server.views).on('change', plugins.livereload.changed);
-	gulp.watch(defaultAssets.server.allJS, ['jshint']).on('change', plugins.livereload.changed);
+	gulp.watch(defaultAssets.server.allJS).on('change', plugins.livereload.changed);
 	gulp.watch(defaultAssets.client.views).on('change', plugins.livereload.changed);
-	gulp.watch(defaultAssets.client.js, ['jshint']).on('change', plugins.livereload.changed);
+	gulp.watch(defaultAssets.client.js).on('change', plugins.livereload.changed);
 	gulp.watch(defaultAssets.client.css, ['csslint']).on('change', plugins.livereload.changed);
 	gulp.watch(defaultAssets.client.sass, ['sass', 'csslint']).on('change', plugins.livereload.changed);
-	gulp.watch(defaultAssets.client.ts, ['tsc', 'jshint']).on('change', plugins.livereload.changed);
+	gulp.watch(defaultAssets.client.ts, ['tsc']).on('change', plugins.livereload.changed);
 });
 
 
 // Typescript task
 gulp.task('tsc', function () {
+	//var ts_config = plugins.typescript.creatproject('tsconfig.json');
 	gulp.src(defaultAssets.client.ts)
-	.pipe(plugins.tsc())
+	.pipe(plugins.typescript({
+		typescript: require('typescript'),
+		target: 'ES5',
+		module: 'commonjs',
+		declarationFiles: false,
+		noExternalResolve: true
+	}))
 	.pipe(plugins.rename(function (path) {
 		path.dirname = path.dirname.replace('/ts', '/js');
 	}))
@@ -77,17 +84,9 @@ gulp.task('csslint', function (done) {
 		}));
 });
 
-// JS linting task
-gulp.task('jshint', function () {
-	return gulp.src(_.union(defaultAssets.client.js))
-		.pipe(plugins.jshint())
-		.pipe(plugins.jshint.reporter('default'))
-		.pipe(plugins.jshint.reporter('fail'));
-});
-
 // Lint CSS and JavaScript files.
 gulp.task('lint', function(done) {
-	runSequence('sass', 'tsc', ['csslint', 'jshint'], done);
+	runSequence('sass', 'tsc', ['csslint'], done);
 });
 
 // Run the project in development mode
