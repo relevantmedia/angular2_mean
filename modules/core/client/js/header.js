@@ -7,20 +7,17 @@ if (typeof __decorate !== "function") __decorate = function (decorators, target,
     }
 };
 var angular2_1 = require("angular2/angular2");
-var header_1 = require("header");
-var MyAppComponent = (function () {
-    function MyAppComponent() {
-        this.name = 'Alice';
+var LayoutHeader = (function () {
+    function LayoutHeader() {
     }
-    MyAppComponent = __decorate([
+    LayoutHeader = __decorate([
         angular2_1.Component({
-            selector: 'my-app'
+            selector: 'header'
         }),
         angular2_1.View({
-            templateUrl: "./modules/core/client/views/index.client.view.html",
-            directives: [header_1.LayoutHeader]
+            templateUrl: "./modules/core/client/views/header.client.view.html"
         })
-    ], MyAppComponent);
-    return MyAppComponent;
+    ], LayoutHeader);
+    return LayoutHeader;
 })();
-angular2_1.bootstrap(MyAppComponent);
+exports.LayoutHeader = LayoutHeader;
