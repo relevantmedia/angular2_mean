@@ -5,7 +5,7 @@ import {Component, bootstrap, View} from "angular2/angular2";
     selector: 'my-app'
 })
 @View({
-    template: '<h1>Hello {{ name }}</h1>'
+	templateUrl: "./modules/core/client/views/index.client.view.html"
 })
 class MyAppComponent {
     name: string;

@@ -16,7 +16,7 @@ var MyAppComponent = (function () {
             selector: 'my-app'
         }),
         angular2_1.View({
-            template: '<h1>Hello {{ name }}</h1>'
+            templateUrl: "./modules/core/client/views/index.client.view.html"
         })
     ], MyAppComponent);
     return MyAppComponent;
