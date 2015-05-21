@@ -5,7 +5,7 @@
  */
 var config = require('./config/config'),
 	mongoose = require('./config/lib/mongoose'),
-	express = require('./config/express');
+	express = require('./config/lib/express');
 
 mongoose.connect(function (db) {
 	// Initialize express
