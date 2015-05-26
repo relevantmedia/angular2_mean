@@ -101,22 +101,22 @@ var initGlobalConfigFiles = function(config, assets) {
     config.files.server.routes = getGlobbedPaths(assets.server.routes);
 
     // Setting Globbed config files
-    config.files.server.configs = getGlobbedPaths(assets.server.config);
+    //config.files.server.configs = getGlobbedPaths(assets.server.config);
 
     // Setting Globbed socket files
-    config.files.server.sockets = getGlobbedPaths(assets.server.sockets);
+    //config.files.server.sockets = getGlobbedPaths(assets.server.sockets);
 
     // Setting Globbed policies files
-    config.files.server.policies = getGlobbedPaths(assets.server.policies);
+    //config.files.server.policies = getGlobbedPaths(assets.server.policies);
 
     // Setting Globbed js files
-    config.files.client.js = getGlobbedPaths(assets.client.lib.js, 'public/').concat(getGlobbedPaths(assets.client.js, ['client/', 'public/']));
+    //config.files.client.js = getGlobbedPaths(assets.client.lib.js, 'public/').concat(getGlobbedPaths(assets.client.js, ['client/', 'public/']));
 
     // Setting Globbed css files
-    config.files.client.css = getGlobbedPaths(assets.client.lib.css, 'public/').concat(getGlobbedPaths(assets.client.css, ['client/', 'public/']));
+    //config.files.client.css = getGlobbedPaths(assets.client.lib.css, 'public/').concat(getGlobbedPaths(assets.client.css, ['client/', 'public/']));
 
     // Setting Globbed test files
-    config.files.client.tests = getGlobbedPaths(assets.client.tests);
+    //config.files.client.tests = getGlobbedPaths(assets.client.tests);
 };
 
 /**
