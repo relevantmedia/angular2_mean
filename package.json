@@ -18,12 +18,15 @@
   "homepage": "https://github.com/relevantmedia/angular2_mean",
   "dependencies": {
     "body-parser": "^1.12.4",
+    "chalk": "^1.0.0",
     "consolidate": "^0.12.1",
     "express": "^4.12.3",
     "glob": "^5.0.6",
     "lodash": "^3.8.0",
     "method-override": "^2.3.3",
+    "mongoose": "^4.0.3",
     "path": "^0.11.14",
+    "serve-favicon": "^2.2.1",
     "swig": "^1.4.2"
   },
   "devDependencies": {
@@ -35,7 +38,16 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.0.1",
     "gulp-typescript": "^2.7.3",
+    "jspm": "^0.15.6",
     "run-sequence": "^1.1.0",
     "typescript": "^1.5.0-beta"
+  },
+  "jspm": {
+    "directories": {},
+    "dependencies": {},
+    "devDependencies": {
+      "traceur": "github:jmcriffey/bower-traceur@0.0.88",
+      "traceur-runtime": "github:jmcriffey/bower-traceur-runtime@0.0.88"
+    }
   }
 }

@@ -4,12 +4,16 @@
  * Module dependencies.
  */
 var config = require('./config/config'),
-	express = require('./config/express');
+	mongoose = require('./config/lib/mongoose'),
+	express = require('./config/lib/express');
 
-var app = express.init();
+mongoose.connect(function (db) {
+	// Initialize express
+	var app = express.init(db);
 
-// Start the app by listening on <port>
-app.listen(config.port);
+	// Start the app by listening on <port>
+	app.listen(config.port);
 
-// Logging initialization
-console.log('MEAN.JS application started on port ' + config.port);
+	// Logging initialization
+	console.log('MEAN.JS application started on port ' + config.port);
+});
