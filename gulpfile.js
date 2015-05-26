@@ -57,9 +57,9 @@ gulp.task('tsc', function () {
 		noExternalResolve: true
 	}))
 	.pipe(plugins.rename(function (path) {
-		path.dirname = path.dirname.replace('/ts', '/js');
+		path.dirname = '';
 	}))
-	.pipe(gulp.dest('./modules/'));
+	.pipe(gulp.dest('./build/'));
 });
 
 // Sass task

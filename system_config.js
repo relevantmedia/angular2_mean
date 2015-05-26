@@ -1,5 +1,5 @@
 System.config({
-  "baseURL": "/",
+  "baseURL": "/build",
   "transpiler": "traceur",
   "paths": {
     "*": "*.js",
@@ -13,4 +13,3 @@ System.config({
     "traceur-runtime": "github:jmcriffey/bower-traceur-runtime@0.0.88"
   }
 });
-
